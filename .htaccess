@@ -1,0 +1,15 @@
+
+# BEGIN WordPress
+# Direktive (redci) između `BEGIN WordPress` i `END WordPress` su
+# dinamički generirani, i trebali bi ih mijenjati samo koristeći WordPress filtere.
+# Sve promijene direktiva između navedenih markera biti će prepisane.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /WP-astra/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /WP-astra/index.php [L]
+</IfModule>
+
+# END WordPress
